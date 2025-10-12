@@ -1,0 +1,30 @@
+th, td{
+    text-align: center;
+border: 5px solid aqua;
+}
+
+table{
+    width: 60%;
+    margin: auto;
+}
+
+*{
+font-size: 32px;
+padding: 10px;
+}
+
+h1{
+background-color: yellow;
+color: green;
+text-align: center;
+}
+
+.h2{
+background-color: green;
+color: red;
+}
+
+td.video{
+text-align: center;
+width: 300px;
+}
