@@ -1,4 +1,4 @@
-import { Form } from "./classes/form.js";
+import { Area } from "./classes/area.js";
 
 const formContato = document.getElementById("formContato") as HTMLFormElement;
 const txtNome = document.getElementById("txtNome") as HTMLInputElement;
@@ -7,6 +7,8 @@ const txtMensagem = document.getElementById("txtMensagem") as HTMLTextAreaElemen
 const btnEnviar = document.getElementById("btnEnviar") as HTMLButtonElement;
 const btnLimpar = document.getElementById("btnLimpar") as HTMLButtonElement;
 const divMensagem = document.getElementById("divMensagem") as HTMLDivElement;
+
+const areas: Area[] = [];
 
 function exibirMensagem(color: string, msg: string) {
   divMensagem.style.color = color;
@@ -25,9 +27,8 @@ formContato.addEventListener("submit", (event) => {
     return;
   }
 
-  const novoForm = new Form(nome, email, mensagem);
-  novoForm.cadastrar();
-
+const area = new Area(nome, email, mensagem);
+  area.cadastrar();
   exibirMensagem("green", "Mensagem enviada com sucesso!");
   formContato.reset();
 });

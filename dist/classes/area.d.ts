@@ -1,13 +1,11 @@
-export declare class Form {
+export declare class Area {
     nome: string;
     email: string;
     mensagem: string;
     id: string;
     constructor(nome: string, email: string, mensagem: string);
     cadastrar(): void;
-    static listar(): Form[];
+    static listar(): Area[];
     static excluir(id: string): void;
-    static alterar(formAlterado: Form): void;
-    static buscar(id: string): Form | undefined;
 }
-//# sourceMappingURL=form.d.ts.map
+//# sourceMappingURL=area.d.ts.map

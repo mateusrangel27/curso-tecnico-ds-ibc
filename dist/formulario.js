@@ -1,4 +1,4 @@
-import { Form } from "./classes/form.js";
+import { Area } from "./classes/area.js";
 const formContato = document.getElementById("formContato");
 const txtNome = document.getElementById("txtNome");
 const txtEmail = document.getElementById("txtEmail");
@@ -6,6 +6,7 @@ const txtMensagem = document.getElementById("txtMensagem");
 const btnEnviar = document.getElementById("btnEnviar");
 const btnLimpar = document.getElementById("btnLimpar");
 const divMensagem = document.getElementById("divMensagem");
+const areas = [];
 function exibirMensagem(color, msg) {
     divMensagem.style.color = color;
     divMensagem.textContent = msg;
@@ -19,8 +20,8 @@ formContato.addEventListener("submit", (event) => {
         exibirMensagem("red", "Todos os campos são obrigatórios!");
         return;
     }
-    const novoForm = new Form(nome, email, mensagem);
-    novoForm.cadastrar();
+    const area = new Area(nome, email, mensagem);
+    area.cadastrar();
     exibirMensagem("green", "Mensagem enviada com sucesso!");
     formContato.reset();
 });

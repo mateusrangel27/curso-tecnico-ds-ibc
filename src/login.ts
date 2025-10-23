@@ -23,7 +23,7 @@ mensagem.style.color = "green";
 mensagem.textContent = "Login realizado com sucesso!";
 
 setTimeout(() => {
-    window.location.href = "login.html";
+    window.location.href = "areaRestrita.html";
 }, 1000);
 
 }else{
